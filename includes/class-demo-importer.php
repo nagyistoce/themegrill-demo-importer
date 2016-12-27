@@ -34,7 +34,7 @@ class TG_Demo_Importer {
 	 * Demo installer.
 	 * @var bool
 	 */
-	public $demo_install = true;
+	public $demo_install = false;
 
 	/**
 	 * Constructor.

@@ -7,6 +7,7 @@
  * Imports
  */
 @import 'bourbon';
+@import 'mixins';
 
 /**
  * Styling begins
@@ -27,6 +28,10 @@
 			font-weight: 300;
 			line-height: 1.5;
 		}
+
+		.demo-BlankState-message::before {
+			@include icon_dashicons( '\f227' );
+		}
 	}
 
 	.demo-installer {
@@ -36,6 +41,35 @@
 			.filter-links li > a:focus {
 				box-shadow: none;
 			}
+		}
+	}
+
+	.demo-BlankState {
+		text-align: center;
+		padding: 5em 0 0;
+
+		.demo-BlankState-message {
+			color: #aaa;
+			margin: 0 auto 1.5em;
+			line-height: 1.5em;
+			font-size: 1.2em;
+			max-width: 500px;
+
+			&::before {
+				color: #ddd;
+				text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.8);
+				font-size: 8em;
+				display: block;
+				position: relative !important;
+				top: auto;
+				left: auto;
+				line-height: 1em;
+				margin: 0 0 0.1875em;
+			}
+		}
+
+		a.demo-BlankState-cta {
+			display: inline-block;
 		}
 	}
 }

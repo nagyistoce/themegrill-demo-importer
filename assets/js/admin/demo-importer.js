@@ -547,6 +547,9 @@ demos.view.Demos = wp.Backbone.View.extend({
 	// The demo count element
 	count: $( '.wrap .demo-count' ),
 
+	// The HTML template for blank state
+	blank: demos.template( 'demo-BlankState' ),
+
 	// The live demos count
 	liveDemoCount: 0,
 
@@ -650,6 +653,12 @@ demos.view.Demos = wp.Backbone.View.extend({
 		// While checking the collection has items
 		if ( this.options.collection.size() > 0 ) {
 			this.renderDemos( this.parent.page );
+		}
+
+		// Display a blank slate if no demos
+		if ( ! demos.isInstall && this.options.collection.size() <= 0 ) {
+			this.$el.append( this.blank );
+			$( '.wp-filter-search' ).hide();
 		}
 
 		// Display a live demo count for the collection
