@@ -12,9 +12,7 @@ $demo_imported_id = get_option( 'themegrill_demo_imported_id' );
 ?>
 <div class="wrap demo-importer">
 	<h1><?php esc_html_e( 'Demo Importer', 'themegrill-demo-importer' ); ?>
-		<?php if ( ! empty( $this->demo_config ) ) : ?>
-			<span class="title-count demo-count"><?php echo count( $this->demo_config ); ?></span>
-		<?php endif; ?>
+		<span class="title-count demo-count"><?php echo count( $this->demo_config ); ?></span>
 		<?php if ( apply_filters( 'themegrill_demo_importer_new_demos', false ) ) : ?>
 			<a href="<?php echo esc_url( 'https://themegrill.com/upcoming-new-demos' ); ?>" class="page-title-action" target="_blank"><?php esc_html_e( 'New Demos', 'themegrill-demo-importer' ); ?></a>
 		<?php endif; ?>
@@ -247,8 +245,8 @@ $demo_imported_id = get_option( 'themegrill_demo_imported_id' );
 
 <script id="tmpl-demo-BlankState" type="text/template">
 	<div class="demo-BlankState">
-		<h2 class="demo-BlankState-message"><?php _e( 'Saved replies are re-usable text snippets that you can use anywhere. They will appear here once created.', 'saved-replies' ); ?></h2>
-		<a class="demo-BlankState-cta button button-primary button-hero" href="<?php echo esc_url( admin_url( 'post-new.php?post_type=saved_reply' ) ); ?>"><?php _e( 'Create your first saved reply!', 'saved-replies' ); ?></a>
+		<h2 class="demo-BlankState-message"><?php _e( 'Oops! Demo Importer configuration files are missing for this theme. They will appear here once added.', 'themegrill-demo-importer' ); ?></h2>
+		<a class="demo-BlankState-cta button button-primary button-hero" href="<?php echo esc_url( 'https://themegrill.com/support-forum/' ); ?>"><?php _e( 'Create your support ticket!', 'themegrill-demo-importer' ); ?></a>
 	</div>
 </script>
 
